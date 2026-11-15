@@ -1,0 +1,500 @@
+
+/* ========================================
+   GHOSTS OF THE MOUNTAINS
+   Elegant Winter Wonderland Theme
+======================================== */
+
+/* General Styles */
+:root {
+    --ice-blue: #dceaf2;
+    --soft-blue: #edf5f8;
+    --deep-blue: #526f83;
+    --dark-blue: #304858;
+    --charcoal: #333d45;
+    --white: #ffffff;
+    --light-gray: #f6f8fa;
+    --accent: #9bb8c9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: var(--white);
+    color: var(--charcoal);
+    line-height: 1.8;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation Bar */
+header {
+    background-color: rgba(255, 255, 255, 0.97);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(48, 72, 88, 0.08);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: var(--dark-blue);
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: var(--charcoal);
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--deep-blue);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 25px;
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            rgba(23, 43, 56, 0.40),
+            rgba(23, 43, 56, 0.55)
+        ),
+        url('images/snow-leopard-hero.jpg');
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.eyebrow {
+    color: var(--deep-blue);
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.hero .eyebrow {
+    color: var(--ice-blue);
+}
+
+.hero h1 {
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    line-height: 1.15;
+    margin-bottom: 25px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: var(--white);
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: var(--white);
+    color: var(--dark-blue);
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: var(--ice-blue);
+    transform: translateY(-3px);
+}
+
+/* General Section Styles */
+.section {
+    padding: 90px 8%;
+}
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-heading h2,
+.section h2 {
+    color: var(--dark-blue);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.3;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.section-heading p {
+    font-size: 1.05rem;
+}
+
+/* About Section */
+.about {
+    background-color: var(--white);
+}
+
+.about-content {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.about-image img {
+    height: 450px;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(48, 72, 88, 0.15);
+}
+
+.about-text h3,
+.conservation-text h3 {
+    color: var(--deep-blue);
+    font-size: 1.65rem;
+    margin-bottom: 18px;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+}
+
+/* Fun Facts Section */
+.facts {
+    background-color: var(--soft-blue);
+    padding: 90px 8%;
+}
+
+.fact-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.fact-card {
+    background-color: var(--white);
+    padding: 30px 23px;
+    text-align: center;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(48, 72, 88, 0.07);
+    transition: transform 0.3s ease;
+}
+
+.fact-card:hover {
+    transform: translateY(-7px);
+}
+
+.fact-icon {
+    display: block;
+    font-size: 2.2rem;
+    color: var(--deep-blue);
+    margin-bottom: 15px;
+}
+
+.fact-card h3 {
+    color: var(--dark-blue);
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+}
+
+.fact-card p {
+    font-size: 0.95rem;
+}
+
+/* Habitat Section */
+.habitat {
+    background-color: var(--white);
+}
+
+.habitat-content {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.habitat-text p {
+    margin-bottom: 20px;
+}
+
+.habitat-image img {
+    height: 460px;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(48, 72, 88, 0.15);
+}
+
+/* Personal Story Section */
+.my-story {
+    background-color: var(--soft-blue);
+}
+
+.story-container {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.story-container h2 {
+    margin-bottom: 35px;
+}
+
+.story-image {
+    margin-bottom: 35px;
+}
+
+.story-image img {
+    height: 420px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(48, 72, 88, 0.12);
+}
+
+.story-container > p:not(.eyebrow) {
+    text-align: left;
+    margin-bottom: 22px;
+    font-size: 1.05rem;
+}
+
+/* Conservation Section */
+.conservation {
+    background-color: var(--white);
+}
+
+.conservation-content {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.conservation-image img {
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(48, 72, 88, 0.15);
+}
+
+.conservation-text p {
+    margin-bottom: 20px;
+}
+
+.protection-list {
+    padding-left: 25px;
+}
+
+.protection-list li {
+    margin-bottom: 12px;
+}
+
+.protection-list li::marker {
+    color: var(--deep-blue);
+}
+
+/* Closing Message */
+.closing-message {
+    max-width: 850px;
+    margin: 85px auto 0;
+    padding: 55px 35px;
+    background-color: var(--soft-blue);
+    text-align: center;
+    border-radius: 18px;
+}
+
+.closing-message h2 {
+    color: var(--dark-blue);
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+/* Resources Section */
+.resources {
+    background-color: var(--soft-blue);
+    padding: 85px 8%;
+    text-align: center;
+}
+
+.resource-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.resource-links a {
+    padding: 14px 24px;
+    background-color: var(--white);
+    color: var(--dark-blue);
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(48, 72, 88, 0.08);
+    transition: all 0.3s ease;
+}
+
+.resource-links a:hover {
+    background-color: var(--deep-blue);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.footer h2 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    font-weight: normal;
+}
+
+.footer p {
+    color: var(--ice-blue);
+    margin-bottom: 12px;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    margin-top: 25px;
+}
+
+/* Responsive Design: Tablets */
+@media (max-width: 900px) {
+
+    .fact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content,
+    .habitat-content,
+    .conservation-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image img,
+    .habitat-image img,
+    .conservation-image img {
+        height: 380px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+}
+
+/* Responsive Design: Mobile Phones */
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        min-height: 520px;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .section,
+    .facts,
+    .resources {
+        padding: 65px 6%;
+    }
+
+    .fact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image img,
+    .habitat-image img,
+    .conservation-image img,
+    .story-image img {
+        height: 300px;
+    }
+
+    .closing-message {
+        margin-top: 55px;
+        padding: 35px 20px;
+    }
+
+    .closing-message h2 {
+        font-size: 1.8rem;
+    }
+
+    .resource-links {
+        flex-direction: column;
+    }
+
+    .resource-links a {
+        display: block;
+    }
+}
